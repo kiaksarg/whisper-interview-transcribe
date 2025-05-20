@@ -1,0 +1,28 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore environment folders
+whisper-env/
+.env/
+.venv/
+env/
+venv/
+
+# Ignore output folder for generated files
+out/
+outputs/
+*.log
+
+# VS Code and PyCharm project settings (optional)
+.vscode/
+.idea/
+
+# macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebook checkpoints (if you ever use notebooks)
+.ipynb_checkpoints/
