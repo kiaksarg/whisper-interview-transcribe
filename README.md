@@ -46,7 +46,9 @@ pip install -r requirements.txt
 > **Note:**
 > For GPU acceleration, install PyTorch matching your CUDA version.
 > See [PyTorch official instructions](https://pytorch.org/get-started/locally/) if you need a different setup.
-
+>
+> **Note on GPU Support:**
+> PyTorch runs on CPU by default, and is optimized for NVIDIA GPUs (CUDA). Not all GPUs or hardware platforms are supported. If no compatible GPU is found, the script will run on CPU, which can be much slower.
 ---
 
 ## Usage

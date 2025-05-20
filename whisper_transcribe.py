@@ -14,6 +14,12 @@ from clean_interview_text import clean_interview_transcript
 
 def transcribe(audio_path, model_name="medium"):  # <-- Default is now "medium"
     device = "cuda" if torch.cuda.is_available() else "cpu"
+    if device == "cpu":
+        print(
+            "\n[WARNING] No GPU detected! Transcription on CPU can be VERY slow, "
+            "especially for medium or large models.\n"
+            "If you have an NVIDIA GPU, make sure you have installed the correct CUDA version of PyTorch.\n"
+        )
     print(f"Loading model '{model_name}' on device: {device}")
     model = whisper.load_model(model_name).to(device)
     print(f"Transcribing {audio_path} ...")
